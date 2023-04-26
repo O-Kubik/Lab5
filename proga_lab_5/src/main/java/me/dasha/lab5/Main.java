@@ -12,8 +12,6 @@ import java.io.IOException;
 public class Main {
     public static void main(String[] args) throws IOException, FileNotFoundException {
         System.out.println("Введите команду. Для справки введите \"help\"");
-        Parser parser = new Parser();
-        parser.parse();
         ConsoleManager consoleManager = new ConsoleManager();
         consoleManager.start();
     }
