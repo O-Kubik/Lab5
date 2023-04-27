@@ -125,17 +125,15 @@ public class CollectionManager {
     }
 
 
-    public static void sort() {
-        Stack<SpaceMarine> tempStack = new Stack<>();
+        public static void sort() {
+        ArrayList<SpaceMarine> list = new ArrayList<>();
         while (!stack.isEmpty()) {
-            SpaceMarine topInputStack = stack.pop();
-            while (!tempStack.empty() && tempStack.peek().compareTo(topInputStack) > 0) {
-                SpaceMarine topTempStack = tempStack.pop();
-                stack.push(topTempStack);
-            }
-            tempStack.push(topInputStack);
+            list.add(stack.pop());
         }
-        stack = tempStack;
+        Collections.sort(list);
+        for (int i = 0; i < list.size(); i++) {
+            stack.push(list.get(i));
+        }
         System.out.println("Коллекция отсортирована: " + stack);
     }
 }
