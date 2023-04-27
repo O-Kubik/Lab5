@@ -11,7 +11,7 @@ import java.io.IOException;
 
 public class Main {
     public static void main(String[] args) throws IOException, FileNotFoundException {
-        Parser_1.fromJsontoCollection(args[0]);
+        Parser_1.fromJsonToCollection(args[0]);
         System.out.println("Введите команду. Для справки введите \"help\"");
         ConsoleManager consoleManager = new ConsoleManager();
         consoleManager.start();
